@@ -1,6 +1,6 @@
 import pygame 
 
-#button class
+#this is the button class
 class Button():
     def __init__(self, surface, x, y, image, size_x, size_y):
         self.image = pygame.transform.scale(image, (size_x, size_y))
@@ -17,7 +17,7 @@ class Button():
 
         #check mouseover and clicked conditions
         if self.rect.collidepoint(pos):
-            if pygame.mouse.get_pressed()[0] == 1 and self.clicked == False:
+            if pygame.mouse.get_pressed()[0] == 1 and self.clicked != True:
                 action = True
                 self.clicked = True
 
